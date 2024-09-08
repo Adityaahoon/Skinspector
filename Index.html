@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skin Cancer Detection</title>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"
+type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script>
+    function showloading() {
+        image = document.getElementById('loading_image');
+        image.style.display = 'inline'
+    }
+</script>
+<style>
+    .img_holder img{
+        max-width: 100%; max-height: 100%;
+    }
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .down_buttons{
+        padding-top:40px ;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+    .main{
+        background-color: blanchedalmond;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    h1
+    {
+        text-align: center;
+        margin: 0;
+        font-size: 25px;
+        color:#14274E;
+    }
+    body{
+        background-color: #ebe5e5;
+        background-image:url("images/back.jpeg");
+        background-size: 1500px 1500px;
+        background-repeat: no-repeat;
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+    }
+    hr{
+        border-style: none;
+        border-top-style: dotted;
+        border-color: #A6A6A4;
+        border-width:5px;
+        width: 100%;
+    }
+    h5{
+        text-align: center;
+        font-size: 25px;
+    }
+    a{
+        color: black;
+    }
+    h2{
+        text-align:center;
+    }
+    .contact-us{
+        text-align: center; 
+    }
+    .middle-container{
+        text-align: center;
+    }
+</style>
+<body class='main'>
+    <body>
+        <h1>SKIN CANCER DETECTION</h1>
+        <br />
+    <div class="middle-container">
+    </div>
+    <br />
+        <p>
+            SKIN CANCER develop anywhere on body. They most develop areas that have exposure in a sun, such as your back, legs, arms and face.
+        <br />
+            Skin cancer also occur areas in that don't receive sun to exposure, such as a soles of your feet, palms hands and fingernail beds.
+        <br />
+            These hidden skin cancer are more common in people with darker skin.
+        <br />
+            Make sure u r save from melonama by trying our detection center
+        </p>
+        <br />
+        <hr />
+    </body>
+<div class="container" style="margin: auto;width:40%; text-align: center; margin-top: 70px; text-transform: uppercase">
+    <h3 style="margin: auto;width: 80%; text-align: center; margin-top: 40px; text-transform:uppercase">Skin Cancer Detection</h3>
+        <div style="text-align: center; margin-top: 10px" >
+            <img style="max-width: 300px" src="{{ url_for('static', filename='img/melonoma.png')}}"/>
+        </div>
+    <form action="/upload" method="post" class="down_buttons" enctype="multipart/form-data" style="margin-top: 50px; width: 60%; text-align: center; margin: auto;" onsubmit="showloading()">
+        <span class="text-left btn btn-default btn-file">
+        Upload Image <input type="file" name="image">
+        </span>
+            <span class="text-right">
+                <input type="submit" value="Predict" class="btn btn-primary">
+            </span>
+    </form>
+        <div style="text-align: center">
+            <img id="loading_image" style="display: none" src="{{ url_for('static', filename='img/tenor.gif')}}">
+        </div>
+            <br />
+            <hr />
+    <div class="contact-us">
+        <h2>Please ask us if you have any queries</h2>
+        <h2>Don't fight SKIN CANCER alone.</h2>
+        </br>
+        <a class="btn" href="vishal.app.purpose@gmail.com">CONTACT US</a>
+    </div>
+    </br>
+    <div class="bottom-container">
+        <p class="copyright">© 2024, Blockchain4Health <br /><br />@SRM institute of science and technology.</p>
+        </div>
+</div>
+</body>
+</html>
