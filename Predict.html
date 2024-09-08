@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>Skin Cancer Detection </title>
+        <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}"
+    type="image/x-icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+    </head>
+
+<style>
+    h5{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    a{
+        font-size: 25px;
+        color: black;
+    }
+</style>
+
+<body>
+    <h4 style="margin: auto;width: 80%; text-align: center; margin-top: 20px; text-transform: uppercase"> Skin Cancer Detection 
+    </h4>
+    <div style="width: 90%; margin: auto; text-align: center">
+        <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px">
+        <p style="font-style: italic">{{ image_file_name }} </p>
+        <h3> <b>We <span style="color: green;"> </span> Diagnosed that this is
+            <span style="color: red;">{{ label }}</span></b>
+            </h3>
+            <div style="width: 90%; margin: auto; text-align: center">
+            </br>
+            <h5>Reference of hospitals</h5>
+            </br>
+            <p>
+            <a href="https://srmglobalhospitals.com/"> SRM Global Hosital-SRM Main Campus </a>
+            <br/>
+            </br>
+            <a href="https://www.rfhospital.org/">SIR H.N. Reliance Hospital Mumbai </a>
+            <br/>
+            </br>
+            <a href="https://www.apollohospitals.com/locations/india/delhi/">Apollo Hospital New Delhi</a>
+            <br/>
+            </p>
+            <br/>
+    
+        <div class="contact-us">
+            <h2>Please ask us if you have any queries</h2>
+            <h2>Don't fight Melonoma alone.</h2>
+            <a class="btn" href="vishal.app.purpose@gmail.com">CONTACT US</a>
+        </div>
+    <div class="bottom-container">
+        <p class="copyright">©2024 Blockchain4Health <br /><br />SRMIST Kattankulathur.</p>
+        </div>
+</div>
+</br>
+    <a href="/">Back to Home</a>
+</div>
+</body>
+</html
